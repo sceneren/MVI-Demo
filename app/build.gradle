@@ -8,7 +8,7 @@ android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
 
     defaultConfig {
-        applicationId "wiki.scene.mvvm"
+        applicationId "wiki.scene.mvi"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
