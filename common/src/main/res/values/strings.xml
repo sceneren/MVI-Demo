@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_loading">加载中…</string>
+    <string name="common_save_to_mobile">保存到手机</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_save_failed">保存失败</string>
+    <string name="common_save_successful">保存成功</string>
+</resources>

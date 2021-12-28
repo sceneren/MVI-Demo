@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+
+    resourcePrefix "base_"
+
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    kapt {
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+        }
+    }
+}
+
+dependencies {
+    api project(path: ':network')
+    implementation rootProject.ext.dependencies["arouter_api"]
+    kapt rootProject.ext.dependencies["arouter_compiler"]
+    api rootProject.ext.dependencies["recyclerview"]
+    api rootProject.ext.dependencies["constraintlayout"]
+    api rootProject.ext.dependencies["viewbindingpropertydelegate"]
+    implementation rootProject.ext.dependencies["immersionbar"]
+    implementation rootProject.ext.dependencies["immersionbar_components"]
+    implementation rootProject.ext.dependencies["immersionbar_ktx"]
+    api rootProject.ext.dependencies["TitleBar"]
+    api rootProject.ext.dependencies["pictureselector"]
+    api rootProject.ext.dependencies["SlideBack"]
+
+    implementation rootProject.ext.dependencies["AgentWeb"]
+    implementation rootProject.ext.dependencies["AgentWeb_filechooser"]
+    implementation rootProject.ext.dependencies["AgentWeb_Downloader"]
+}

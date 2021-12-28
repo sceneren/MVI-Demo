@@ -1,0 +1,5 @@
+include ':app'
+include ':base'
+include ':network'
+include ':common'
+include ':entity'

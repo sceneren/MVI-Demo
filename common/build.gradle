@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    resourcePrefix "common_"
+
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    api rootProject.ext.dependencies["multidex"]
+    api rootProject.ext.dependencies["core_ktx"]
+    api rootProject.ext.dependencies["appcompat"]
+    api rootProject.ext.dependencies["fragment_ktx"]
+    api rootProject.ext.dependencies["kotlinx_coroutines_android"]
+    api rootProject.ext.dependencies["material"]
+
+    api rootProject.ext.dependencies["navigation_fragment_ktx"]
+    api rootProject.ext.dependencies["navigation_ui_ktx"]
+
+    api rootProject.ext.dependencies["lifecycle_common_java8"]
+    api rootProject.ext.dependencies["lifecycle_viewmodel_ktx"]
+    api rootProject.ext.dependencies["lifecycle_livedata_ktx"]
+
+    api rootProject.ext.dependencies["live_event_bus_x"]
+    api rootProject.ext.dependencies["DialogX"]
+    api rootProject.ext.dependencies["DialogXIOSStyle"]
+    api rootProject.ext.dependencies["utilcodex"]
+    api rootProject.ext.dependencies["FlycoTabLayout"]
+    api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    api rootProject.ext.dependencies["refresh_layout_kernel"]
+    api rootProject.ext.dependencies["refresh_header_material"]
+    api rootProject.ext.dependencies["AndroidAutoSize"]
+    api rootProject.ext.dependencies["recycler_view_divider"]
+    api rootProject.ext.dependencies["LoadSir"]
+    api rootProject.ext.dependencies["coil"]
+    api rootProject.ext.dependencies["coil_gif"]
+    api rootProject.ext.dependencies["coil_svg"]
+    api rootProject.ext.dependencies["coil_video"]
+    implementation rootProject.ext.dependencies["mojito"]
+    implementation rootProject.ext.dependencies["SketchImageViewLoader"]
+    implementation rootProject.ext.dependencies["ToastUtils"]
+}

@@ -1,0 +1,137 @@
+ext {
+
+    android = [
+            compileSdkVersion: 31,
+            targetSdkVersion : 28,
+            minSdkVersion    : 21,
+            versionName      : "1.1.0",
+            versionCode      : 2,
+    ]
+
+    androidX = [
+            recyclerview    : "1.2.1",
+            constraintlayout: "2.1.0",
+            multidex        : "2.0.1",
+            core_ktx        : "1.7.0",
+            appcompat       : "1.3.1",
+            fragment_ktx    : "1.3.6",
+            material        : "1.4.0",
+            navigation      : "2.3.5",
+            lifecycle       : "2.4.0",
+    ]
+
+    kotlin = [
+            kotlin_version            : "1.6.0",
+            kotlinx_coroutines_android: "1.5.2",
+    ]
+
+    version = [
+            leakcanary                   : "2.7",
+            arouter                      : "1.5.2",
+            SplitEditText                : "1.0.0",
+            SwipeMenuRecyclerView        : "2.1.0",
+            viewbindingpropertydelegate  : "1.4.6",
+            TitleBar                     : "9.2",
+            immersionbar                 : "3.0.0",
+            pictureselector              : "v2.7.3-rc10",
+            live_event_bus_x             : "1.8.0",
+            dialogx                      : "0.0.44.beta2",
+            utilcodex                    : "1.30.6",
+            FlycoTabLayout               : "2.0.6",
+            BaseRecyclerViewAdapterHelper: "3.0.6",
+            SmartRefreshLayout           : "2.0.3",
+            AndroidAutoSize              : "v1.2.1",
+            recycler_view_divider        : "3.5.0",
+            LoadSir                      : "1.3.8",
+            coil                         : "1.4.0",
+            mojito                       : "1.8.3",
+            ToastUtils                   : "10.0",
+            okhttp                       : "4.9.2",
+            retrofit                     : "2.9.0",
+            bannerviewpager              : "3.5.4",
+            SlideBack                    : "1.1.2",
+            AgentWeb                     : "v5.0.0-alpha.1-androidx",
+            AgentWeb_Downloader          : "v5.0.0-androidx"
+    ]
+
+    dependencies = [
+            "appcompat"                    : "androidx.appcompat:appcompat:${androidX["appcompat"]}",
+            "recyclerview"                 : "androidx.recyclerview:recyclerview:${androidX["recyclerview"]}",
+            "constraintlayout"             : "androidx.constraintlayout:constraintlayout:${androidX["constraintlayout"]}",
+            "multidex"                     : "androidx.multidex:multidex:${androidX["multidex"]}",
+            "fragment_ktx"                 : "androidx.fragment:fragment-ktx:${androidX["fragment_ktx"]}",
+            "core_ktx"                     : "androidx.core:core-ktx:${androidX["core_ktx"]}",
+            "material"                     : "com.google.android.material:material:${androidX["material"]}",
+            "navigation_fragment_ktx"      : "androidx.navigation:navigation-fragment-ktx:${androidX["navigation"]}",
+            "navigation_ui_ktx"            : "androidx.navigation:navigation-ui-ktx:${androidX["navigation"]}",
+            "lifecycle_common_java8"       : "androidx.lifecycle:lifecycle-common-java8:${androidX["lifecycle"]}",
+            "lifecycle_viewmodel_ktx"      : "androidx.lifecycle:lifecycle-viewmodel-ktx:${androidX["lifecycle"]}",
+            "lifecycle_livedata_ktx"       : "androidx.lifecycle:lifecycle-livedata-ktx:${androidX["lifecycle"]}",
+
+            "kotlinx_coroutines_android"   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${kotlin["kotlinx_coroutines_android"]}",
+
+            "leakcanary_android"           : "com.squareup.leakcanary:leakcanary-android:${version["leakcanary"]}",
+            //https://github.com/alibaba/ARouter/blob/master/README_CN.md
+            "arouter_api"                  : "com.alibaba:arouter-api:${version["arouter"]}",
+            "arouter_compiler"             : "com.alibaba:arouter-compiler:${version["arouter"]}",
+            "SplitEditText"                : "com.github.jenly1314:SplitEditText:${version["SplitEditText"]}",
+            //https://github.com/aitsuki/SwipeMenuRecyclerView
+            "SwipeMenuRecyclerView"        : "com.github.aitsuki:SwipeMenuRecyclerView:${version["SwipeMenuRecyclerView"]}",
+            //https://github.com/androidbroadcast/ViewBindingPropertyDelegate
+            "viewbindingpropertydelegate"  : "com.github.kirich1409:viewbindingpropertydelegate-noreflection:${version["viewbindingpropertydelegate"]}",
+            //https://github.com/gyf-dev/ImmersionBar
+            "immersionbar"                 : "com.gyf.immersionbar:immersionbar:${version["immersionbar"]}",
+            "immersionbar_components"      : "com.gyf.immersionbar:immersionbar-components:${version["immersionbar"]}",
+            "immersionbar_ktx"             : "com.gyf.immersionbar:immersionbar-ktx:${version["immersionbar"]}",
+            //https://github.com/getActivity/TitleBar
+            "TitleBar"                     : "com.github.getActivity:TitleBar:${version["TitleBar"]}",
+            //https://github.com/LuckSiege/PictureSelector/blob/master/README_CN.md
+            "pictureselector"              : "io.github.lucksiege:pictureselector:${version["pictureselector"]}",
+            //https://github.com/JeremyLiao/LiveEventBus
+            "live_event_bus_x"             : "io.github.jeremyliao:live-event-bus-x:${version["live_event_bus_x"]}",
+            //https://github.com/kongzue/DialogX/wiki/
+            "DialogX"                      : "com.github.kongzue.DialogX:DialogX:${version["dialogx"]}",
+            "DialogXIOSStyle"              : "com.github.kongzue.DialogX:DialogXIOSStyle:${version["dialogx"]}",
+            //https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
+            "utilcodex"                    : "com.blankj:utilcodex:${version["utilcodex"]}",
+            //https://github.com/H07000223/FlycoTabLayout/blob/master/README_CN.md
+            //https://github.com/li-xiaojun/FlycoTabLayout  支持viewpager2，clone自上面的代码
+            "FlycoTabLayout"               : "com.github.li-xiaojun:FlycoTabLayout:${version["FlycoTabLayout"]}",
+            //https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:${version["BaseRecyclerViewAdapterHelper"]}",
+            //https://github.com/scwang90/SmartRefreshLayout
+            "refresh_layout_kernel"        : "com.scwang.smart:refresh-layout-kernel:${version["SmartRefreshLayout"]}",
+            "refresh_header_material"      : "com.scwang.smart:refresh-header-material:${version["SmartRefreshLayout"]}",
+            //https://github.com/JessYanCoding/AndroidAutoSize
+            "AndroidAutoSize"              : "com.github.JessYanCoding:AndroidAutoSize:${version["AndroidAutoSize"]}",
+            //https://github.com/fondesa/recycler-view-divider
+            "recycler_view_divider"        : "com.github.fondesa:recycler-view-divider:${version["recycler_view_divider"]}",
+            //https://github.com/KingJA/LoadSir
+            "LoadSir"                      : "com.github.KingJA:LoadSir:${version["LoadSir"]}",
+            //https://github.com/coil-kt/coil ,文档：https://coil-kt.github.io/coil/getting_started/
+            "coil"                         : "io.coil-kt:coil:${version["coil"]}",
+            "coil_gif"                     : "io.coil-kt:coil-gif:${version["coil"]}",
+            "coil_svg"                     : "io.coil-kt:coil-svg:${version["coil"]}",
+            "coil_video"                   : "io.coil-kt:coil-video:${version["coil"]}",
+            //https://github.com/mikaelzero/mojito
+            "mojito"                       : "com.github.mikaelzero.mojito:mojito:${version["mojito"]}",
+            //support long image and gif with Sketch
+            "SketchImageViewLoader"        : "com.github.mikaelzero.mojito:SketchImageViewLoader:${version["mojito"]}",
+            //https://github.com/getActivity/ToastUtils
+            "ToastUtils"                   : "com.github.getActivity:ToastUtils:${version["ToastUtils"]}",
+            "gson"                         : "com.google.code.gson:gson:2.8.8",
+            "GsonFactory"                  : "com.github.getActivity:GsonFactory:5.2",
+            "okhttp"                       : "com.squareup.okhttp3:okhttp:${version["okhttp"]}",
+            "okhttp_logging_interceptor"   : "com.squareup.okhttp3:logging-interceptor:${version["okhttp"]}",
+            "retrofit"                     : "com.squareup.retrofit2:retrofit:${version["retrofit"]}",
+            "retrofit_converter_gson"      : "com.squareup.retrofit2:converter-gson:${version["retrofit"]}",
+            //https://github.com/zhpanvip/BannerViewPager/blob/master/README_CN.md
+            "bannerviewpager"              : "com.github.zhpanvip:bannerviewpager:${version["bannerviewpager"]}",
+            //https://github.com/ParfoisMeng/SlideBack
+            "SlideBack"                    : "com.github.ParfoisMeng:SlideBack:${version["SlideBack"]}",
+            //https://github.com/Justson/AgentWeb/wiki
+            "AgentWeb"                     : "com.github.Justson.AgentWeb:agentweb-core:${version["AgentWeb"]}",
+            "AgentWeb_filechooser"         : "com.github.Justson.AgentWeb:agentweb-filechooser:${version["AgentWeb"]}",
+            "AgentWeb_Downloader"          : "com.github.Justson:Downloader:${version["AgentWeb_Downloader"]}"
+    ]
+}
